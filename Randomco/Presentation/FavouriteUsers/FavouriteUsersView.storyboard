@@ -71,34 +71,19 @@
                                                         <constraint firstAttribute="height" constant="95" id="Wc5-av-Vo7"/>
                                                     </constraints>
                                                 </imageView>
-                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlj-Xa-nNN">
-                                                    <rect key="frame" x="12" y="8" width="44.5" height="44.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="hlj-Xa-nNN" secondAttribute="height" id="yzC-wm-Pdc"/>
-                                                    </constraints>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
-                                                    <connections>
-                                                        <action selector="didTapAddFavourite:" destination="Na3-yF-urP" eventType="touchUpInside" id="tXj-VE-smJ"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="SQp-nj-YEC" firstAttribute="leading" secondItem="Wbk-WU-gPs" secondAttribute="trailing" constant="12" id="1xj-Yd-1xU"/>
                                                 <constraint firstItem="Wbk-WU-gPs" firstAttribute="centerY" secondItem="ZtI-Vi-RDa" secondAttribute="centerY" id="7Tg-EN-COi"/>
                                                 <constraint firstItem="Wbk-WU-gPs" firstAttribute="leading" secondItem="ZtI-Vi-RDa" secondAttribute="leading" constant="12" id="GQc-kU-0Uc"/>
                                                 <constraint firstAttribute="bottom" secondItem="SQp-nj-YEC" secondAttribute="bottom" constant="8" id="H7t-Km-lvV"/>
-                                                <constraint firstItem="hlj-Xa-nNN" firstAttribute="leading" secondItem="Wbk-WU-gPs" secondAttribute="leading" id="Px1-RA-sKo"/>
                                                 <constraint firstItem="SQp-nj-YEC" firstAttribute="top" secondItem="ZtI-Vi-RDa" secondAttribute="top" constant="8" id="QrG-Yi-xvF"/>
-                                                <constraint firstItem="Wbk-WU-gPs" firstAttribute="top" secondItem="hlj-Xa-nNN" secondAttribute="bottom" constant="8" id="cak-b1-TAa"/>
-                                                <constraint firstItem="hlj-Xa-nNN" firstAttribute="top" secondItem="ZtI-Vi-RDa" secondAttribute="top" constant="8" id="g5g-M8-sJW"/>
                                                 <constraint firstAttribute="trailing" secondItem="SQp-nj-YEC" secondAttribute="trailing" constant="12" id="kRb-OV-qR7"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="deleteButton" destination="viT-Dm-G2q" id="30F-t6-Leq"/>
                                             <outlet property="emailLabel" destination="0T7-OJ-YbG" id="3Jv-He-Xyk"/>
-                                            <outlet property="favouriteButton" destination="hlj-Xa-nNN" id="6vn-zz-B7V"/>
                                             <outlet property="nameLabel" destination="6Tu-df-s5q" id="U7m-oi-XpG"/>
                                             <outlet property="phoneLabel" destination="ZbO-ew-xr8" id="vUG-Rq-Lla"/>
                                             <outlet property="userImageView" destination="Wbk-WU-gPs" id="nfK-39-fI9"/>
@@ -126,7 +111,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heart" catalog="system" width="128" height="109"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

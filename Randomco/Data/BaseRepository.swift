@@ -9,11 +9,11 @@ import Combine
 import Foundation
 
 protocol BaseRepository {
-    func execute<T: Decodable>(request: HttpRequest, responseType: T.Type) -> AnyPublisher<T, Error>
+    func execute<T: Decodable>(request: HttpRequest) -> AnyPublisher<T, Error>
 }
 
 extension BaseRepository {
-    func execute<T: Decodable>(request: HttpRequest, responseType: T.Type) -> AnyPublisher<T, Error> {
+    func execute<T: Decodable>(request: HttpRequest) -> AnyPublisher<T, Error> {
         var urlComponents = URLComponents(string: request.stringURL)!
             
         if let data = request.parameter?.toJson(), request.encoded == .url {
@@ -58,7 +58,7 @@ extension BaseRepository {
             return output.data
         }
         .receive(on: RunLoop.main)
-        .decode(type: responseType.self, decoder: JSONDecoder())
+        .decode(type: T.self, decoder: JSONDecoder())
         .eraseToAnyPublisher()
     }
 }

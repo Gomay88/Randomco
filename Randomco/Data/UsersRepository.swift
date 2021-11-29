@@ -20,6 +20,6 @@ class UsersRepositoryDefault: BaseRepository, UsersRepository {
         .encoded(.url)
         .builtHttpRequest()
         
-        return execute(request: request, responseType: UsersResponse.self)
+        return execute(request: request)
     }
 }
